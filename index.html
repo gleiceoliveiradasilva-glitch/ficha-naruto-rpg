@@ -92,6 +92,26 @@ header {
     box-sizing: border-box !important;
     break-inside: auto;
   }
+  /* Compacta os registros 03, 04 e 05 */
+main > .panel:nth-child(3),
+main > .panel:nth-child(4),
+main > .panel:nth-child(5) {
+  margin-bottom: 2mm !important;
+  padding: 5px !important;
+}
+
+main > .panel:nth-child(3) h2,
+main > .panel:nth-child(4) h2,
+main > .panel:nth-child(5) h2 {
+  margin-bottom: 5px !important;
+  padding-bottom: 3px !important;
+}
+
+main > .panel:nth-child(3) p,
+main > .panel:nth-child(5) p {
+  margin-top: 4px !important;
+  margin-bottom: 5px !important;
+}
 
   /* Mantém os grupos organizados */
   .grid {
