@@ -50,7 +50,24 @@
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
+  
+header {
+  display: block !important;
+  visibility: visible !important;
+  color: #222 !important;
+  background: #fff !important;
+  text-align: center !important;
+  border-bottom: 1px solid #999 !important;
+}
 
+.title,
+.crest,
+.subtitle {
+  display: block !important;
+  visibility: visible !important;
+  color: #222 !important;
+}
+  
   /* Esconde controles e ações que não precisam sair no papel */
   .actions,
   .btn,
@@ -193,7 +210,9 @@
 <section class="panel"><h2>04 · Identidade shinobi</h2><div class="grid"><div class="field"><label for="chakraNature">Natureza(s) do chakra</label><textarea id="chakraNature" placeholder="Registre as naturezas de chakra"></textarea></div><div class="field"><label for="signatureJutsu">Jutsu de assinatura</label><textarea id="signatureJutsu" placeholder="Descreva o jutsu de assinatura"></textarea></div><div class="field" style="grid-column:1/-1"><label for="clanHistory">Traço de clã / histórico / objetivo</label><textarea id="clanHistory" placeholder="Histórico, traços, motivações e objetivos"></textarea></div></div></section>
 <section class="panel"><h2>05 · Habilidades</h2><p class="hint">Todas começam na base da patente. Chūnin recebe 26 pontos extras para distribuir. Máximo 5 por habilidade; mínimo igual à base da patente.</p><div class="count">Pontos extras disponíveis: <strong id="skillPoints">26</strong></div><div class="skills"><div class="groupcard"><h3>Corpo e combate</h3><div id="skillsBody"></div></div><div class="groupcard"><h3>Técnicas e chakra</h3><div id="skillsTech"></div></div><div class="groupcard"><h3>Mental / tático / social</h3><div id="skillsMind"></div></div></div></section>
 <section class="panel"><h2>06 · Anotações de campanha</h2><div class="grid"><div class="field"><label for="importantJutsu">Jutsus importantes</label><textarea id="importantJutsu" placeholder="Jutsus conhecidos ou planejados"></textarea></div><div class="field"><label for="equipment">Equipamentos</label><textarea id="equipment" placeholder="Armas, ferramentas e itens"></textarea></div><div class="field"><label for="limits">Limitações / objetivos</label><textarea id="limits" placeholder="Limitações, metas e objetivos"></textarea></div><div class="field"><label for="notes">Anotações de campanha</label><textarea id="notes" placeholder="Anotações livres da campanha"></textarea></div></div></section>
-<section class="panel"><h2>07 · Salvar e compartilhar</h2><p class="hint">O salvamento automático funciona neste navegador e neste dispositivo. Para guardar uma cópia ou levar a ficha para outro aparelho, exporte o arquivo JSON e importe-o depois.</p><div class="actions"><button class="btn" id="saveBtn">Salvar neste dispositivo</button><button class="btn gold" id="exportBtn">Exportar ficha (.json)</button><label class="btn secondary upload">Importar ficha (.json)<input type="file" id="importFile" accept=".json,application/json"></label><button class="btn secondary" id="resetBtn">Limpar ficha</button></div><p id="status" class="status" aria-live="polite"></p></section>
+<section class="panel"><h2>07 · Salvar e compartilhar</h2><p class="hint">O salvamento automático funciona neste navegador e neste dispositivo. Para guardar uma cópia ou levar a ficha para outro aparelho, exporte o arquivo JSON e importe-o depois.</p><div class="actions"><button class="btn" id="saveBtn">Salvar neste dispositivo</button><button class="btn gold" id="exportBtn">Exportar ficha (.json)</button><label class="btn secondary upload">Importar ficha (.json)<input type="file" id="importFile" accept=".json,application/json"></label><button class="btn secondary" id="resetBtn">Limpar ficha</button>
+ <button class="btn secondary" id="pdfBtn" type="button" onclick="window.print()">Gerar PDF</button>
+</div><p id="status" class="status" aria-live="polite"></p></section>
 </main><footer>SHINOBI RPG • Ficha individual • Guarde uma cópia exportada para não perder seus dados.</footer>
 <script>
 const $=id=>document.getElementById(id);let imageData='';
