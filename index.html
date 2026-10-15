@@ -112,6 +112,11 @@ main > .panel:nth-child(5) p {
   margin-top: 4px !important;
   margin-bottom: 5px !important;
 }
+  /* Mantém o Registro 06 inteiro na mesma página */
+main > .panel:nth-child(6) {
+  break-inside: avoid !important;
+  page-break-inside: avoid !important;
+}
 
   /* Mantém os grupos organizados */
   .grid {
