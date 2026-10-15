@@ -146,10 +146,15 @@ header {
     box-sizing: border-box !important;
   }
 
-  .field textarea {
-    resize: none !important;
-    overflow: visible !important;
-  }
+.field textarea {
+  resize: none !important;
+  overflow: visible !important;
+  height: auto !important;
+  min-height: 0 !important;
+  field-sizing: content !important;
+  white-space: pre-wrap !important;
+  overflow-wrap: anywhere !important;
+}
 
   .stepper {
     gap: 4px !important;
